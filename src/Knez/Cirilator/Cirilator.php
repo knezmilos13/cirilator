@@ -52,7 +52,7 @@ class Cirilator {
 	 * @param string $text
 	 * @return string
 	 */
-	public static function srediSlova($text) {
+	public static function fixLettersForDB($text) {
 		if(self::isCyrillic($text))
 			$fixedText = self::convertCyrillicToLatin($text);
 		else 
