@@ -55,10 +55,15 @@ class CirilatorTest extends \PHPUnit_Framework_TestCase {
 	public function providerZaKonvertujDj() {
 		return [
 			[ "abcdjef", "abcđef" ], // dj postaje đ
+
 			[ "odjek", "odjek" ], // ovo mora da ostane dj
+			[ "Odjek", "Odjek" ],
+
 			[ "DJ", "DJ" ], // ovo ostaje DJ (doduse case insensitive, ostace i dj)
+
 			[ "bla pedja bla odjek bla odjek dodji podjednako nanana",
 				"bla peđa bla odjek bla odjek dođi podjednako nanana" ],
+
 			[ "bla, ;pedja, ,bla ,odjek, , , ,bla ,odjek ,dodji !podjednako??? !!!nanana",
 				"bla, ;peđa, ,bla ,odjek, , , ,bla ,odjek ,dođi !podjednako??? !!!nanana" ],
 
