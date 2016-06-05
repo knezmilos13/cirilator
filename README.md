@@ -19,10 +19,10 @@ All functions are defined as static on class Cirilator, e.g.:
 
 Available functions:
 
-| Name                   | Description                                                   |
-|------------------------|---------------------------------------------------------------|
-| giveLatinAHaircut      | Converts č, š, ć, etc. into c, s, c...                        |
-| isCyrillic             | returns TRUE if text is any kind of cyrilic                   |
-| convertCyrillicToLatin | Converts cyrillic to latin                                    |
-| convertLettersDj       | Converts letters dj into đ, taking special cases into account |
-| fixLettersForDB        | If cyrillic, converts to latin; if latin, converts dj to đ    |
+| Name                   | Description                                                        |
+|------------------------|--------------------------------------------------------------------|
+| giveLatinAHaircut      | Converts Serbian latin letters - č, š, ć, etc. into c, s, c...     |
+| isCyrillic             | Returns TRUE if text is any kind of cyrilic                        |
+| convertCyrillicToLatin | Converts Serbian cyrillic to latin                                 |
+| convertLettersDj       | Converts "dj"-s into "đ"-s, taking special cases into account      |
+| fixLettersForDB        | If cyrillic, converts to latin; if latin, converts "dj"-s to "đ"-s |
