@@ -30,7 +30,7 @@ class CirilatorData {
 		"bdjenja",
 
 		/* D */
-		"DJ", // doduse ovo je case insensitive, znaci svako samostalno dj ce ostati dj
+		"dj", // as in "DJ", just needs to be lowercase... so even "dj" will be spared
 
 		/* I */
 		"izblijedjeli", "izblijedjelo",

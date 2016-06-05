@@ -24,9 +24,21 @@ class Cirilator {
 	public static function konvertujDj($sta) {
 		$parcad = preg_split('/\b/ui', $sta);
 		$brojParcadi = count($parcad);
+		$countDjWords = count(CirilatorData::$reciSaDj);
+
 		for($i=0; $i < $brojParcadi; $i++) {
-			if(!in_array($parcad[$i], CirilatorData::$reciSaDj))
-				$parcad[$i] = preg_replace("/dj/ui", "đ", $parcad[$i]);
+
+			if(empty(trim($parcad[$i]))) continue;
+
+			$wordToTest = mb_strtolower($parcad[$i]);
+
+			for($j = 0; $j < $countDjWords; $j++) {
+				if($wordToTest == CirilatorData::$reciSaDj[$j]
+					|| $wordToTest == self::osisajLatinicu(CirilatorData::$reciSaDj[$j]))
+					continue 2; // found special word; don't convert dj, check next word
+			}
+
+			$parcad[$i] = preg_replace("/dj/ui", "đ", $parcad[$i]);
 		}
 		
 		$sta = implode('', $parcad);
