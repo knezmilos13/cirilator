@@ -54,22 +54,20 @@ class CirilatorTest extends \PHPUnit_Framework_TestCase {
 	
 	public function providerZaKonvertujDj() {
 		return [
-			[ "abcdjef",
-				"abcđef" ], // dj postaje đ
-			[ "odjek",
-				"odjek" ], // ovo mora da ostane dj
-			[ "DJ",
-				"DJ" ], // ovo ostaje DJ (doduse case insensitive, ostace i dj)
+			[ "abcdjef", "abcđef" ], // dj postaje đ
+			[ "odjek", "odjek" ], // ovo mora da ostane dj
+			[ "DJ", "DJ" ], // ovo ostaje DJ (doduse case insensitive, ostace i dj)
 			[ "bla pedja bla odjek bla odjek dodji podjednako nanana",
 				"bla peđa bla odjek bla odjek dođi podjednako nanana" ],
 			[ "bla, ;pedja, ,bla ,odjek, , , ,bla ,odjek ,dodji !podjednako??? !!!nanana",
 				"bla, ;peđa, ,bla ,odjek, , , ,bla ,odjek ,dođi !podjednako??? !!!nanana" ],
-			[ "ёёёёёёё",
-				"ёёёёёёё" ], // ruska cirilica
-			[ "ひらがな",
-				"ひらがな" ],
-			[ "平仮名",
-				"平仮名" ]
+
+			[ "ёёёёёёё", "ёёёёёёё" ], // ruska cirilica
+			[ "ひらがな", "ひらがな" ],
+			[ "平仮名", "平仮名" ],
+
+			[ 'nadjačavši', 'nadjačavši' ],
+			[ 'nadjacavsi', 'nadjacavsi' ]
 		];
 	}
 
