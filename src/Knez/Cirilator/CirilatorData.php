@@ -2,27 +2,29 @@
 
 namespace Knez\Cirilator;
 
-/** Sadrzi konstante - nizove sa slovima, recima i sl. */
+/** Contains "constants" - i.e. arrays of letters and words */
 class CirilatorData {
 	
-	static $cirilica = [ "љ", "њ", "е", "р", "т", "з", "у", "и", "о",
-		"п", "ш", "ђ", "ж", "а", "с", "д", "ф", "г", "х", "ј", "к", "л", 
-		"ч", "ћ", "џ", "ц", "в", "б", "н", "м", "Љ", "Њ", "Е", "Р", "Т", 
-		"З", "У", "И", "О", "П", "Ш", "Ђ", "Ж", "А", "С", "Д", "Ф", "Г", 
-		"Х", "Ј", "К", "Л", "Ч", "Ћ", "Џ", "Ц", "В", "Б", "Н", "М" ];
-	static $latinica = [ "lj", "nj", "e", "r", "t", "z", "u", "i", "o",
-		"p", "š", "đ", "ž", "a", "s", "d", "f", "g", "h", "j", "k", "l", 
-		"č", "ć", "dž", "c", "v", "b", "n", "m", "Lj", "Nj", "E", "R", "T", 
-		"Z", "U", "I", "O", "P", "Š", "Đ", "Ž", "A", "S", "D", "F", "G", 
-		"H", "J", "K", "L", "Č", "Đ", "Dž", "C", "V", "B", "N", "M" ];
+	static $cyrillicLetters = [    "љ",  "њ", "е",  "р", "т",  "з",  "у", "и",
+		"о", "п", "ш", "ђ",  "ж",  "а",  "с", "д",  "ф", "г",  "х",  "ј", "к",
+		"л", "ч", "ћ", "џ",  "ц",  "в",  "б", "н",  "м", "Љ",  "Њ",  "Е", "Р",
+		"Т", "З", "У", "И",  "О",  "П",  "Ш", "Ђ",  "Ж", "А",  "С",  "Д", "Ф",
+		"Г", "Х", "Ј", "К",  "Л",  "Ч",  "Ћ", "Џ",  "Ц", "В",  "Б",  "Н", "М" ];
 
-	// Napomena: neki izgleda imaju nesrpske tastarure sa nekim cudnim latinicnim slovima kao ż
-	static $latinicaSrpska =
+	static $latinLetters = [ "lj", "nj", "e", "r",  "t", "z",  "u",  "i",
+		"o", "p", "š", "đ",  "ž",  "a",  "s", "d",  "f", "g",  "h",  "j", "k",
+		"l", "č", "ć", "dž", "c",  "v",  "b", "n",  "m", "Lj", "Nj", "E", "R",
+		"T", "Z", "U", "I",  "O",  "P",  "Š", "Đ",  "Ž", "A",  "S",  "D", "F",
+		"G", "H", "J", "K",  "L",  "Č",  "Đ", "Dž", "C", "V",  "B",  "N", "M" ];
+
+	// Note: some folks apparently use wierd nonserbian keyboards with letters like ż
+	// This is probably just a wierd edge case, but added the letter just in case
+	static $serbianLatinLetters =
 		[ 'š', 'č', 'ć', 'đ',  'ž', 'Š', 'Č', 'Ć', 'Đ',  'Dž', 'Ž', 'ż', 'Ż' ];
-	static $latinicaOsisana =
+	static $haircutLatinLetters =
 		[ 's', 'c', 'c', 'dj', 'z', 'S', 'C', 'C', 'Dj', 'Dz', 'Z', 'z', 'Z' ];
 		
-	static $reciSaDj = [
+	static $wordsWithDj = [
 		/* A */
 		"adjektiv", "adjektiva", "adjektivi", "adjektivom", "adjektivu",
 

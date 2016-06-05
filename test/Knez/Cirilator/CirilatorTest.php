@@ -9,7 +9,7 @@ class CirilatorTest extends \PHPUnit_Framework_TestCase {
 	 * @dataProvider providerZaJelCirilica
 	 */
 	public function testJelCirilica($tekst, $jelCirilica) {
-		$this->assertEquals($jelCirilica, Cirilator::jelCirilica($tekst));
+		$this->assertEquals($jelCirilica, Cirilator::isCyrillic($tekst));
 	}
 	
 	public function providerZaJelCirilica() {
@@ -29,7 +29,7 @@ class CirilatorTest extends \PHPUnit_Framework_TestCase {
 	 * @dataProvider providerZaCirilicaULatinicu
 	 */
 	public function testCirilicaULatinicu($tekst, $rezultat) {
-		$this->assertEquals($rezultat, Cirilator::cirilicaULatinicu($tekst));
+		$this->assertEquals($rezultat, Cirilator::convertCyrillicToLatin($tekst));
 	}
 	
 	public function providerZaCirilicaULatinicu() {
@@ -81,7 +81,7 @@ class CirilatorTest extends \PHPUnit_Framework_TestCase {
 	 * @dataProvider providerZaOsisajLatinicu
 	 */
 	public function testOsisajLatinicu($tekst, $rezultat) {
-		$this->assertEquals($rezultat, Cirilator::osisajLatinicu($tekst));
+		$this->assertEquals($rezultat, Cirilator::giveLatinAHaircut($tekst));
 	}
 
 	public function providerZaOsisajLatinicu() {

@@ -3,62 +3,62 @@
 namespace Knez\Cirilator;
 
 /**
- * Konvertuje cirilicu u latinicu, sisa latinicu, konvertuje dj u đ
+ * Converts cyrilic to latin, haircuts latin, converts dj to đ
  */
 class Cirilator {
 
-	public static function osisajLatinicu($string) {
+	public static function giveLatinAHaircut($string) {
 		return str_replace(
-			CirilatorData::$latinicaSrpska, CirilatorData::$latinicaOsisana, $string);
+			CirilatorData::$serbianLatinLetters, CirilatorData::$haircutLatinLetters, $string);
 	}
 	
-	public static function jelCirilica($sta) {
+	public static function isCyrillic($sta) {
 		return preg_match('/\p{Cyrillic}+/ui', $sta);
 	}
-	
-	public static function cirilicaULatinicu($cirlica) {
-		return str_replace(CirilatorData::$cirilica, CirilatorData::$latinica, $cirlica);
+
+	public static function convertCyrillicToLatin($cirlica) {
+		return str_replace(CirilatorData::$cyrillicLetters, CirilatorData::$latinLetters, $cirlica);
 	}
 
-	/** Konvertuje dj u đ, ali tako da ostavlja ona dj koja su stvarno dj, kao tipa "odjek". */
-	public static function konvertujDj($sta) {
-		$parcad = preg_split('/\b/ui', $sta);
-		$brojParcadi = count($parcad);
-		$countDjWords = count(CirilatorData::$reciSaDj);
+	/** Converts dj to đ, but leaves letters dj that are actually dj, e.g. "odjek". */
+	public static function konvertujDj($text) {
+		$pieces = preg_split('/\b/ui', $text);
+		$numPieces = count($pieces);
+		$numDjWords = count(CirilatorData::$wordsWithDj);
 
-		for($i=0; $i < $brojParcadi; $i++) {
+		for($i=0; $i < $numPieces; $i++) {
 
-			if(empty(trim($parcad[$i]))) continue;
+			if(empty(trim($pieces[$i]))) continue;
 
-			$wordToTest = mb_strtolower($parcad[$i]);
+			$wordToTest = mb_strtolower($pieces[$i]);
 
-			for($j = 0; $j < $countDjWords; $j++) {
-				if($wordToTest == CirilatorData::$reciSaDj[$j]
-					|| $wordToTest == self::osisajLatinicu(CirilatorData::$reciSaDj[$j]))
+			for($j = 0; $j < $numDjWords; $j++) {
+				if($wordToTest == CirilatorData::$wordsWithDj[$j]
+					|| $wordToTest == self::giveLatinAHaircut(CirilatorData::$wordsWithDj[$j]))
 					continue 2; // found special word; don't convert dj, check next word
 			}
 
-			$parcad[$i] = preg_replace("/dj/ui", "đ", $parcad[$i]);
+			$pieces[$i] = preg_replace("/dj/ui", "đ", $pieces[$i]);
 		}
-		
-		$sta = implode('', $parcad);
-		return $sta;
+
+		return implode('', $pieces);
 	}
 
 	/**
-	 * Ako nadje "dj" u tekstu, menja ga pravim slovom đ.
-	 * Takodje, ako je dati tekst na cirilici, menja ga u latinicu.
+	 * Replaces found "dj"-s with "đ"-s. If text is cyrillic, it is converted to latin.
+	 * Useful for doing queries on a mysql database, if your data is in latin. Especially since
+	 * mysql can wordk with haircut letters, but doesn't recognize "dj" as "đ"
 	 *
-	 * @param string $izvorniTekst - izvorni tekst (cirilicni ili latinicni)
-	 * @return string              - modifikovan tekst (latinicni)
+	 * @param string $text
+	 * @return string
 	 */
-	public static function srediSlova($izvorniTekst) {
-		if(self::jelCirilica($izvorniTekst))
-			$sredjenTekst = self::cirilicaULatinicu($izvorniTekst);
+	public static function srediSlova($text) {
+		if(self::isCyrillic($text))
+			$fixedText = self::convertCyrillicToLatin($text);
 		else 
-			$sredjenTekst = self::konvertujDj($izvorniTekst);
+			$fixedText = self::konvertujDj($text);
 		
-		return $sredjenTekst;
+		return $fixedText;
 	}
 }
 ?>
