@@ -22,7 +22,7 @@ Available functions:
 | Name                   | Description                                                   |
 |------------------------|---------------------------------------------------------------|
 | giveLatinAHaircut      | Converts č, š, ć, etc. into c, s, c...                        |
-| isCyrillic             | returns TRUE if text is anz kind of cyrilic                   |
+| isCyrillic             | returns TRUE if text is any kind of cyrilic                   |
 | convertCyrillicToLatin | Converts cyrillic to latin                                    |
 | convertLettersDj       | Converts letters dj into đ, taking special cases into account |
 | fixLettersForDB        | If cyrillic, converts to latin; if latin, converts dj to đ    |
