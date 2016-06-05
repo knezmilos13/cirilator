@@ -21,7 +21,7 @@ class Cirilator {
 	}
 
 	/** Converts dj to đ, but leaves letters dj that are actually dj, e.g. "odjek". */
-	public static function konvertujDj($text) {
+	public static function convertLettersDj($text) {
 		$pieces = preg_split('/\b/ui', $text);
 		$numPieces = count($pieces);
 		$numDjWords = count(CirilatorData::$wordsWithDj);
@@ -56,7 +56,7 @@ class Cirilator {
 		if(self::isCyrillic($text))
 			$fixedText = self::convertCyrillicToLatin($text);
 		else 
-			$fixedText = self::konvertujDj($text);
+			$fixedText = self::convertLettersDj($text);
 		
 		return $fixedText;
 	}

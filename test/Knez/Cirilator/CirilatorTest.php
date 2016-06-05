@@ -49,7 +49,7 @@ class CirilatorTest extends \PHPUnit_Framework_TestCase {
 	 * @dataProvider providerZaKonvertujDj
 	 */
 	public function testKonvertujDj($tekst, $rezultat) {
-		$this->assertEquals($rezultat, Cirilator::konvertujDj($tekst));
+		$this->assertEquals($rezultat, Cirilator::convertLettersDj($tekst));
 	}
 	
 	public function providerZaKonvertujDj() {
