@@ -1,0 +1,8 @@
+{
+    "name": "knezmilos13/cirilator",
+    "autoload": {
+        "psr-0" : {
+            "Knez\\Cirilator" : "src"
+        }
+    }
+}
