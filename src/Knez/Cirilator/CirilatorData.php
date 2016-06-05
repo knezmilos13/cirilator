@@ -23,29 +23,43 @@ class CirilatorData {
 		[ 's', 'c', 'c', 'dj', 'z', 'S', 'C', 'C', 'Dj', 'Dz', 'Z', 'z', 'Z' ];
 		
 	static $reciSaDj = [
-		"DJ", // doduse ovo je case insensitive, znaci svako samostalno dj ce ostati dj
-		"adjektiv", "adjektiva", "adjektivi", "adjektivom", "adjektivu", "bdjenja", "vindjaknom", 
-		"vindjaknu", "zapodjene", "zdjela", "zdjele", "izblijedjeli", "izblijedjelo", "nadjača", 
-		"nadjačava", "nadjačavajući", "nadjačavao", "nadjačavši", "nadjačaju", "nadjačala",
-		"nadjačale", "nadjačali", "nadjačam", "nadjačan", "nadjačane", "nadjačani", "nadjačano",
-		"nadjačao", "nadjačati", "nadjačaće", "nadjačah", "nadjačaše", "nadjunači", "nadjunačimo",
-		"nadjunačismo", "nenadjačan", "odjava", "odjave", "odjavi", "odjavili", "odjavilo",
-		"odjavio", "odjavite", "odjaviti", "odjaviše", "odjavljen", "odjavljena", "odjavljeni",
-		"odjavljivanje", "odjavljivati", "odjavljujem", "odjavljuju", "odjavna", "odjavni",
-		"odjavnim", "odjavu", "odjaha", "odjahali", "odjahao", "odjahati", "odjahaše", "odjaše",
-		"odjašem", "odjaši", "odjašu", "odjebeš", "odjebi", "odjedanput", "odjedared", "odjednom",
-		"odjedriti", "odjek", "odjeka", "odjeke", "odjekivala", "odjekivale", "odjekivali",
-		"odjekivalo", "odjekivanje", "odjekivao", "odjekivati", "odjekivahu", "odjekivaše",
-		"odjekne", "odjekni", "odjeknu", "odjeknula", "odjeknule", "odjeknuli", "odjeknulo",
-		"odjeknuo", "odjeknuti", "odjeknuće", "odjeknuše", "odjekom", "odjeku", "odjekuje",
-		"odjekujem", "odjekuju", "odjekujući", "odjela", "odjelo", "odjesti", "odjeci", "odjecima",
-		"odjure", "odjuri", "odjurila", "odjurili", "odjurim", "odjurio", "odjurite", "odjuriti",
-		"odjuriše", "podjari", "podjarivao", "podjariti", "podjarme", "podjarmi", "podjarmila",
+		/* A */	"adjektiv", "adjektiva", "adjektivi", "adjektivom", "adjektivu",
+
+		/* B */	"bdjenja",
+
+		/* D */ "DJ", // doduse ovo je case insensitive, znaci svako samostalno dj ce ostati dj
+
+		/* I */ "izblijedjeli", "izblijedjelo",
+
+		/* N */ "nadjača", "nadjačava", "nadjačavajući", "nadjačavao", "nadjačavši", "nadjačaju",
+		"nadjačala", "nadjačale", "nadjačali", "nadjačam", "nadjačan", "nadjačane", "nadjačani",
+		"nadjačano", "nadjačao", "nadjačati", "nadjačaće", "nadjačah", "nadjačaše", "nadjunači",
+		"nadjunačimo", "nadjunačismo", "nenadjačan",
+
+		/* O */ "odjava", "odjave", "odjavi", "odjavili", "odjavilo", "odjavio", "odjavite",
+		"odjaviti", "odjaviše", "odjavljen", "odjavljena", "odjavljeni", "odjavljivanje",
+		"odjavljivati", "odjavljujem", "odjavljuju", "odjavna", "odjavni", "odjavnim", "odjavu",
+		"odjaha", "odjahali", "odjahao", "odjahati", "odjahaše", "odjaše", "odjašem", "odjaši",
+		"odjašu", "odjebeš", "odjebi", "odjedanput", "odjedared", "odjednom", "odjedriti", "odjek",
+		"odjeka", "odjeke", "odjekivala", "odjekivale", "odjekivali", "odjekivalo", "odjekivanje",
+		"odjekivao", "odjekivati", "odjekivahu", "odjekivaše", "odjekne", "odjekni", "odjeknu",
+		"odjeknula", "odjeknule", "odjeknuli", "odjeknulo", "odjeknuo", "odjeknuti", "odjeknuće",
+		"odjeknuše", "odjekom", "odjeku", "odjekuje", "odjekujem", "odjekuju", "odjekujući",
+		"odjela", "odjelo", "odjesti", "odjeci", "odjecima", "odjure", "odjuri", "odjurila",
+		"odjurili", "odjurim", "odjurio", "odjurite", "odjuriti", "odjuriše",
+
+		/* P */ "podjari", "podjarivao", "podjariti", "podjarme", "podjarmi", "podjarmila",
 		"podjarmili", "podjarmio", "podjarmiti", "podjarmiše", "podjarmljen", "podjarmljeni",
 		"podjarmljenosti", "podjarmljivati", "podjarujem", "podjednak", "podjednaka", "podjednake",
 		"podjednaki", "podjednakim", "podjednakih", "podjednako", "podjednakoj", "podjednaku",
 		"podjezična", "podjela", "podjele", "predjela", "predjelima", "predjelo", "predjelom",
-		"predjelu", "razdjeliti", "razdjeliše"
+		"predjelu",
+
+		/* R */ "razdjeliti", "razdjeliše",
+
+		/* V */ "vindjaknom", "vindjaknu",
+
+		/* Z */ "zapodjene", "zdjela", "zdjele",
 	];
 
 }
