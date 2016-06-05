@@ -23,20 +23,26 @@ class CirilatorData {
 		[ 's', 'c', 'c', 'dj', 'z', 'S', 'C', 'C', 'Dj', 'Dz', 'Z', 'z', 'Z' ];
 		
 	static $reciSaDj = [
-		/* A */	"adjektiv", "adjektiva", "adjektivi", "adjektivom", "adjektivu",
+		/* A */
+		"adjektiv", "adjektiva", "adjektivi", "adjektivom", "adjektivu",
 
-		/* B */	"bdjenja",
+		/* B */
+		"bdjenja",
 
-		/* D */ "DJ", // doduse ovo je case insensitive, znaci svako samostalno dj ce ostati dj
+		/* D */
+		"DJ", // doduse ovo je case insensitive, znaci svako samostalno dj ce ostati dj
 
-		/* I */ "izblijedjeli", "izblijedjelo",
+		/* I */
+		"izblijedjeli", "izblijedjelo",
 
-		/* N */ "nadjača", "nadjačava", "nadjačavajući", "nadjačavao", "nadjačavši", "nadjačaju",
+		/* N */
+		"nadjača", "nadjačava", "nadjačavajući", "nadjačavao", "nadjačavši", "nadjačaju",
 		"nadjačala", "nadjačale", "nadjačali", "nadjačam", "nadjačan", "nadjačane", "nadjačani",
 		"nadjačano", "nadjačao", "nadjačati", "nadjačaće", "nadjačah", "nadjačaše", "nadjunači",
 		"nadjunačimo", "nadjunačismo", "nenadjačan",
 
-		/* O */ "odjava", "odjave", "odjavi", "odjavili", "odjavilo", "odjavio", "odjavite",
+		/* O */
+		"odjava", "odjave", "odjavi", "odjavili", "odjavilo", "odjavio", "odjavite",
 		"odjaviti", "odjaviše", "odjavljen", "odjavljena", "odjavljeni", "odjavljivanje",
 		"odjavljivati", "odjavljujem", "odjavljuju", "odjavna", "odjavni", "odjavnim", "odjavu",
 		"odjaha", "odjahali", "odjahao", "odjahati", "odjahaše", "odjaše", "odjašem", "odjaši",
@@ -48,18 +54,22 @@ class CirilatorData {
 		"odjela", "odjelo", "odjesti", "odjeci", "odjecima", "odjure", "odjuri", "odjurila",
 		"odjurili", "odjurim", "odjurio", "odjurite", "odjuriti", "odjuriše",
 
-		/* P */ "podjari", "podjarivao", "podjariti", "podjarme", "podjarmi", "podjarmila",
+		/* P */
+		"podjari", "podjarivao", "podjariti", "podjarme", "podjarmi", "podjarmila",
 		"podjarmili", "podjarmio", "podjarmiti", "podjarmiše", "podjarmljen", "podjarmljeni",
 		"podjarmljenosti", "podjarmljivati", "podjarujem", "podjednak", "podjednaka", "podjednake",
 		"podjednaki", "podjednakim", "podjednakih", "podjednako", "podjednakoj", "podjednaku",
 		"podjezična", "podjela", "podjele", "predjela", "predjelima", "predjelo", "predjelom",
 		"predjelu",
 
-		/* R */ "razdjeliti", "razdjeliše",
+		/* R */
+		"razdjeliti", "razdjeliše",
 
-		/* V */ "vindjaknom", "vindjaknu",
+		/* V */
+		"vindjaknom", "vindjaknu",
 
-		/* Z */ "zapodjene", "zdjela", "zdjele",
+		/* Z */
+		"zapodjene", "zdjela", "zdjele",
 	];
 
 }

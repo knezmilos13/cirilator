@@ -34,8 +34,8 @@ class Cirilator {
 	}
 
 	/**
-	 * Ako nadje "dj" u tekstu, menja ga pravim slovom dj (zamisli da sam ovo otkucao na srpskoj
-	 * tastuturi). Takodje, ako je dati tekst na cirilici, menja ga u latinicu.
+	 * Ako nadje "dj" u tekstu, menja ga pravim slovom đ.
+	 * Takodje, ako je dati tekst na cirilici, menja ga u latinicu.
 	 *
 	 * @param string $izvorniTekst - izvorni tekst (cirilicni ili latinicni)
 	 * @return string              - modifikovan tekst (latinicni)
